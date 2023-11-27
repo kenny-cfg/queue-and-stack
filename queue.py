@@ -5,7 +5,9 @@ class Queue:
         self.storage = []
 
     def push(self, element):
-        pass
+        self.storage.append(element)
 
     def pop(self):
-        pass
+        value = self.storage[0]
+        self.storage = self.storage[1::]
+        return value
