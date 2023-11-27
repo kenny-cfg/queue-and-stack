@@ -1,8 +1,10 @@
 # Queue, i.e. FIFO object
 
 class Queue:
-    def __init__(self):
+    def __init__(self, *args):
         self.storage = []
+        for arg in args:
+            self.enqueue(arg)
 
     def enqueue(self, element):
         self.storage.append(element)
