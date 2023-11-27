@@ -27,13 +27,6 @@ def is_palindrome(source):
     remainder = source[1:-1]
     return is_palindrome(remainder)
 
-# Function that
-#  * take a string
-#  * returns True if it's a palindrome
-#  * returns False otherwise
-# ABBA is a palindrome
-# racecar is a palindrome
-
 
 if __name__ == "__main__":
     result = is_palindrome('racecar')
