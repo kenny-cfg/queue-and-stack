@@ -2,7 +2,7 @@
 
 class Queue:
     def __init__(self):
-        pass
+        self.storage = []
 
     def push(self, element):
         pass
