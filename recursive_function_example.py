@@ -17,14 +17,26 @@ def product_up_to(upper_limit):
     return upper_limit * product_up_to(upper_limit - 1)
 
 
+def is_palindrome(source):
+    if len(source) <= 1:
+        return True
+    last_letter = source[-1]
+    first_letter = source[0]
+    if last_letter != first_letter:
+        return False
+    remainder = source[1:-1]
+    return is_palindrome(remainder)
+
 # Function that
 #  * take a string
 #  * returns True if it's a palindrome
 #  * returns False otherwise
+# ABBA is a palindrome
+# racecar is a palindrome
 
 
 if __name__ == "__main__":
-    result = sum_up_to(6) # 1 + 2 + 3 + 4 + 5 + 6
-    print(result) # 21
-    result = product_up_to(6) # 1 * 2 * 3 * 4 * 5 * 6
-    print(result) # 720
+    result = is_palindrome('racecar')
+    print(result)
+    result = is_palindrome('fireworks')
+    print(result)
